@@ -1,0 +1,3426 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f66fdc0f086ab631cedeb9cdbaf64405 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 440px; height: 130px; 
+     background-color: white; border:2px solid grey; z-index:9999; 
+     font-size:14px; padding: 12px; border-radius: 6px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3);">
+
+<b><span style="color:black">IAS Global Network</b><br>
+<span style="color:red">_★_</span><b>NetIAS Members (21 - 30%)</span><br>
+<span style="color:blue">_★_</span><b>Other Institutes (48 - 70%)</span><br>
+<b><span style="color:black">Total IAS: 69</span><br>
+<i>The statistics based on the number of IAS shown on this map</span></br>
+
+</div>
+    
+            <div class="folium-map" id="map_f66fdc0f086ab631cedeb9cdbaf64405" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f66fdc0f086ab631cedeb9cdbaf64405 = L.map(
+                "map_f66fdc0f086ab631cedeb9cdbaf64405",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c8c842d9f32c476c77f984af981a2edf = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c8c842d9f32c476c77f984af981a2edf.addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var marker_124b28b66e6ce1ba108ecf09551593cd = L.marker(
+                [40.3487, -74.6593],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_978e7f4d8dfe82f819a6ac526a947fac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_108403f2e2340cedce4b87c8d93832ef = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_98b76c1570fd830fd556bb396ff5eec6 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2lhcy5lZHUiIHRhcmdldD0iX2JsYW5rIj48Yj5JbnN0aXR1dGUgZm9yIEFkdmFuY2VkIFN0dWR5IChJQVMpPC9iPjwvYT48YnI+UHJpbmNldG9uLCBVU0E=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_108403f2e2340cedce4b87c8d93832ef.setContent(i_frame_98b76c1570fd830fd556bb396ff5eec6);
+            
+        
+
+        marker_124b28b66e6ce1ba108ecf09551593cd.bindPopup(popup_108403f2e2340cedce4b87c8d93832ef)
+        ;
+
+        
+    
+    
+            marker_124b28b66e6ce1ba108ecf09551593cd.bindTooltip(
+                `<div>
+                     Institute for Advanced Study (IAS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_124b28b66e6ce1ba108ecf09551593cd.setIcon(icon_978e7f4d8dfe82f819a6ac526a947fac);
+            
+    
+            var marker_e0661b382ffdcaabfa471a7e97d89992 = L.marker(
+                [53.0375, 8.6358],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_5be1aaf87b87940748ab820bc170350e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_733b553a52586734ccc0879d06ed433f = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_ae1e1b5d04bda7e145e35a6ec99f8076 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2hhbnNlLWlhcy5kZSIgdGFyZ2V0PSJfYmxhbmsiPjxiPkhhbnNlLVdpc3NlbnNjaGFmdHNrb2xsZWcgKEhXSyk8L2I+PC9hPjxicj5EZWxtZW5ob3JzdCwgR2VybWFueQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_733b553a52586734ccc0879d06ed433f.setContent(i_frame_ae1e1b5d04bda7e145e35a6ec99f8076);
+            
+        
+
+        marker_e0661b382ffdcaabfa471a7e97d89992.bindPopup(popup_733b553a52586734ccc0879d06ed433f)
+        ;
+
+        
+    
+    
+            marker_e0661b382ffdcaabfa471a7e97d89992.bindTooltip(
+                `<div>
+                     Hanse-Wissenschaftskolleg (HWK)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e0661b382ffdcaabfa471a7e97d89992.setIcon(icon_5be1aaf87b87940748ab820bc170350e);
+            
+    
+            var marker_0207abd6e6446d4f383fc16988bac86e = L.marker(
+                [52.52, 13.405],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_79f5134575056c0a1c548ff8e4d4e08b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d62fbf5da159afaed7b97f6ee6e3941d = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_61f8d3c4a37c12e5e0d0b7b3ad8001d7 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3dpa28tYmVybGluLmRlIiB0YXJnZXQ9Il9ibGFuayI+PGI+V2lzc2Vuc2NoYWZ0c2tvbGxlZyB6dSBCZXJsaW48L2I+PC9hPjxicj5CZXJsaW4sIEdlcm1hbnk=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_d62fbf5da159afaed7b97f6ee6e3941d.setContent(i_frame_61f8d3c4a37c12e5e0d0b7b3ad8001d7);
+            
+        
+
+        marker_0207abd6e6446d4f383fc16988bac86e.bindPopup(popup_d62fbf5da159afaed7b97f6ee6e3941d)
+        ;
+
+        
+    
+    
+            marker_0207abd6e6446d4f383fc16988bac86e.bindTooltip(
+                `<div>
+                     Wissenschaftskolleg zu Berlin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0207abd6e6446d4f383fc16988bac86e.setIcon(icon_79f5134575056c0a1c548ff8e4d4e08b);
+            
+    
+            var marker_0be1a52131c0f2eef8931ca7b2fe0d7a = L.marker(
+                [59.8585, 17.6459],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_c4907bee04f4085a01691cffdc0e131c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df3942623874a3d4621675fe3fabffd6 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_61492ce869643a5ee8c9f11b7c76058b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3NjYXNuZXQub3JnIiB0YXJnZXQ9Il9ibGFuayI+PGI+U3dlZGlzaCBDb2xsZWdpdW0gZm9yIEFkdmFuY2VkIFN0dWR5IChTQ0FTKTwvYj48L2E+PGJyPlVwcHNhbGEsIFN3ZWRlbg==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_df3942623874a3d4621675fe3fabffd6.setContent(i_frame_61492ce869643a5ee8c9f11b7c76058b);
+            
+        
+
+        marker_0be1a52131c0f2eef8931ca7b2fe0d7a.bindPopup(popup_df3942623874a3d4621675fe3fabffd6)
+        ;
+
+        
+    
+    
+            marker_0be1a52131c0f2eef8931ca7b2fe0d7a.bindTooltip(
+                `<div>
+                     Swedish Collegium for Advanced Study (SCAS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0be1a52131c0f2eef8931ca7b2fe0d7a.setIcon(icon_c4907bee04f4085a01691cffdc0e131c);
+            
+    
+            var marker_a135ba9b07f6279c1b7d01e5e9bc80d6 = L.marker(
+                [52.3702, 4.8897],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_9cc4dd112a2c0dc27992af61e4da9760 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c0499bcbdca44dc06f79d46d98828b18 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_6f81c7826f6f316e8eba57a4a7532431 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL25pYXMua25hdy5ubCIgdGFyZ2V0PSJfYmxhbmsiPjxiPk5ldGhlcmxhbmRzIEluc3RpdHV0ZSBmb3IgQWR2YW5jZWQgU3R1ZHkgKE5JQVMpPC9iPjwvYT48YnI+QW1zdGVyZGFtLCBOZXRoZXJsYW5kcw==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_c0499bcbdca44dc06f79d46d98828b18.setContent(i_frame_6f81c7826f6f316e8eba57a4a7532431);
+            
+        
+
+        marker_a135ba9b07f6279c1b7d01e5e9bc80d6.bindPopup(popup_c0499bcbdca44dc06f79d46d98828b18)
+        ;
+
+        
+    
+    
+            marker_a135ba9b07f6279c1b7d01e5e9bc80d6.bindTooltip(
+                `<div>
+                     Netherlands Institute for Advanced Study (NIAS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a135ba9b07f6279c1b7d01e5e9bc80d6.setIcon(icon_9cc4dd112a2c0dc27992af61e4da9760);
+            
+    
+            var marker_79879b0b71caf5fd8ad7bb735b19610c = L.marker(
+                [47.2184, -1.5422],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_5ec717090eca901a61c6514bc4e0ad42 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_382e08d3dfea2aa17c99345c2051f5b5 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_87e48ebadc7387ac00c197f19bdf83ed = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2llYS1uYW50ZXMuZnIiIHRhcmdldD0iX2JsYW5rIj48Yj5OYW50ZXMgSUFTIEZvdW5kYXRpb24gKEZJQVMpPC9iPjwvYT48YnI+TmFudGVzLCBGcmFuY2U=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_382e08d3dfea2aa17c99345c2051f5b5.setContent(i_frame_87e48ebadc7387ac00c197f19bdf83ed);
+            
+        
+
+        marker_79879b0b71caf5fd8ad7bb735b19610c.bindPopup(popup_382e08d3dfea2aa17c99345c2051f5b5)
+        ;
+
+        
+    
+    
+            marker_79879b0b71caf5fd8ad7bb735b19610c.bindTooltip(
+                `<div>
+                     Nantes IAS Foundation (FIAS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_79879b0b71caf5fd8ad7bb735b19610c.setIcon(icon_5ec717090eca901a61c6514bc4e0ad42);
+            
+    
+            var marker_b107aca355197468eb111c731e445884 = L.marker(
+                [31.7683, 35.2137],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_7e9b311d56d8b2fe5e5fe1db692dbd13 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3af4fa3314fa156d82d7c7d5867a3b34 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_a1fb960fe1528097a0c8efb0f888b975 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2lpYXMuaHVqaS5hYy5pbCIgdGFyZ2V0PSJfYmxhbmsiPjxiPklzcmFlbCBJbnN0aXR1dGUgZm9yIEFkdmFuY2VkIFN0dWRpZXMgKElJQVMpPC9iPjwvYT48YnI+SmVydXNhbGVtLCBJc3JhZWw=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_3af4fa3314fa156d82d7c7d5867a3b34.setContent(i_frame_a1fb960fe1528097a0c8efb0f888b975);
+            
+        
+
+        marker_b107aca355197468eb111c731e445884.bindPopup(popup_3af4fa3314fa156d82d7c7d5867a3b34)
+        ;
+
+        
+    
+    
+            marker_b107aca355197468eb111c731e445884.bindTooltip(
+                `<div>
+                     Israel Institute for Advanced Studies (IIAS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b107aca355197468eb111c731e445884.setIcon(icon_7e9b311d56d8b2fe5e5fe1db692dbd13);
+            
+    
+            var marker_40212b38783784874754aafd629fef6f = L.marker(
+                [56.1591, 10.2039],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_609b513a88e2c16004d2fbd93518a564 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7ec797406b2ab3186e429f6630e58119 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_f052de2a706d60083028ce49c72ff72d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2FpYXMuYXUuZGsiIHRhcmdldD0iX2JsYW5rIj48Yj5BYXJodXMgSW5zdGl0dXRlIG9mIEFkdmFuY2VkIFN0dWRpZXMgKEFJQVMpPC9iPjwvYT48YnI+QWFyaHVzLCBEZW5tYXJr" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_7ec797406b2ab3186e429f6630e58119.setContent(i_frame_f052de2a706d60083028ce49c72ff72d);
+            
+        
+
+        marker_40212b38783784874754aafd629fef6f.bindPopup(popup_7ec797406b2ab3186e429f6630e58119)
+        ;
+
+        
+    
+    
+            marker_40212b38783784874754aafd629fef6f.bindTooltip(
+                `<div>
+                     Aarhus Institute of Advanced Studies (AIAS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_40212b38783784874754aafd629fef6f.setIcon(icon_609b513a88e2c16004d2fbd93518a564);
+            
+    
+            var marker_4d45bfeb97758bdfd9e87c0563b6fe50 = L.marker(
+                [48.0099, 7.8421],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_7ca10acdcfcd60dc95a2ff90fe0ead36 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d4caf32ad208be22b102fed1409bb08 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_79d2f6421c32b82cdd78713c6b924c10 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2ZyaWFzLnVuaS1mcmVpYnVyZy5kZSIgdGFyZ2V0PSJfYmxhbmsiPjxiPkZyZWlidXJnIEluc3RpdHV0ZSBmb3IgQWR2YW5jZWQgU3R1ZGllcyAoRlJJQVMpPC9iPjwvYT48YnI+RnJlaWJ1cmcsIEdlcm1hbnk=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_1d4caf32ad208be22b102fed1409bb08.setContent(i_frame_79d2f6421c32b82cdd78713c6b924c10);
+            
+        
+
+        marker_4d45bfeb97758bdfd9e87c0563b6fe50.bindPopup(popup_1d4caf32ad208be22b102fed1409bb08)
+        ;
+
+        
+    
+    
+            marker_4d45bfeb97758bdfd9e87c0563b6fe50.bindTooltip(
+                `<div>
+                     Freiburg Institute for Advanced Studies (FRIAS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4d45bfeb97758bdfd9e87c0563b6fe50.setIcon(icon_7ca10acdcfcd60dc95a2ff90fe0ead36);
+            
+    
+            var marker_55d8156808a83367b9df4466d95bebf2 = L.marker(
+                [60.1719, 24.9384],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_d28f62c2273145d88cbf57386eb33cb5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9ee20a2245a56c455b0a8fbf2630be11 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_d5d5a1c630a2c25036d2db20b06317bc = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2hlbHNpbmtpLmZpL2NvbGxlZ2l1bSIgdGFyZ2V0PSJfYmxhbmsiPjxiPkhlbHNpbmtpIENvbGxlZ2l1bSBmb3IgQWR2YW5jZWQgU3R1ZGllczwvYj48L2E+PGJyPkhlbHNpbmtpLCBGaW5sYW5k" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_9ee20a2245a56c455b0a8fbf2630be11.setContent(i_frame_d5d5a1c630a2c25036d2db20b06317bc);
+            
+        
+
+        marker_55d8156808a83367b9df4466d95bebf2.bindPopup(popup_9ee20a2245a56c455b0a8fbf2630be11)
+        ;
+
+        
+    
+    
+            marker_55d8156808a83367b9df4466d95bebf2.bindTooltip(
+                `<div>
+                     Helsinki Collegium for Advanced Studies
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_55d8156808a83367b9df4466d95bebf2.setIcon(icon_d28f62c2273145d88cbf57386eb33cb5);
+            
+    
+            var marker_48149760c426de2fc770d3e3ec157b7a = L.marker(
+                [52.2053, 0.1179],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_a0747373bde96f07b4a5bcccabb28e1f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6a14bc0181b9d75f38b469a991526c68 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_1046eef9cf00074f37d793c732c5c960 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2NyYXNzaC5jYW0uYWMudWsiIHRhcmdldD0iX2JsYW5rIj48Yj5DUkFTU0ggQ2FtYnJpZGdlPC9iPjwvYT48YnI+Q2FtYnJpZGdlLCBVSw==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_6a14bc0181b9d75f38b469a991526c68.setContent(i_frame_1046eef9cf00074f37d793c732c5c960);
+            
+        
+
+        marker_48149760c426de2fc770d3e3ec157b7a.bindPopup(popup_6a14bc0181b9d75f38b469a991526c68)
+        ;
+
+        
+    
+    
+            marker_48149760c426de2fc770d3e3ec157b7a.bindTooltip(
+                `<div>
+                     CRASSH Cambridge
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_48149760c426de2fc770d3e3ec157b7a.setIcon(icon_a0747373bde96f07b4a5bcccabb28e1f);
+            
+    
+            var marker_8a3c5847c4dc90d7096d0ca21c8ea313 = L.marker(
+                [55.9441, -3.1883],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_08ce7c020b74012acb2fd2ae88267181 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_afbcfe93327c7440ce69e5fe3d36dd61 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_09ba3bde864765051854fe9b7787c2fe = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2VkLmFjLnVrL2lhcyIgdGFyZ2V0PSJfYmxhbmsiPjxiPkluc3RpdHV0ZSBmb3IgQWR2YW5jZWQgU3R1ZGllcyBFZGluYnVyZ2g8L2I+PC9hPjxicj5FZGluYnVyZ2gsIFVL" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_afbcfe93327c7440ce69e5fe3d36dd61.setContent(i_frame_09ba3bde864765051854fe9b7787c2fe);
+            
+        
+
+        marker_8a3c5847c4dc90d7096d0ca21c8ea313.bindPopup(popup_afbcfe93327c7440ce69e5fe3d36dd61)
+        ;
+
+        
+    
+    
+            marker_8a3c5847c4dc90d7096d0ca21c8ea313.bindTooltip(
+                `<div>
+                     Institute for Advanced Studies Edinburgh
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8a3c5847c4dc90d7096d0ca21c8ea313.setIcon(icon_08ce7c020b74012acb2fd2ae88267181);
+            
+    
+            var marker_91a85a2d53fadb0fc493837b2b916116 = L.marker(
+                [47.50096276, 19.04936039],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_9af91e8a685688aface756709cf90d15 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_05d31baa2baaa897520669b57cb7110b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_fd808b157aeb2e3fa2738636005d131b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2NldS5lZHUiIHRhcmdldD0iX2JsYW5rIj48Yj5DZW50cmFsIEV1cm9wZWFuIFVuaXZlcnNpdHkgSUFTPC9iPjwvYT48YnI+QnVkYXBlc3QsIEh1bmdhcnk=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_05d31baa2baaa897520669b57cb7110b.setContent(i_frame_fd808b157aeb2e3fa2738636005d131b);
+            
+        
+
+        marker_91a85a2d53fadb0fc493837b2b916116.bindPopup(popup_05d31baa2baaa897520669b57cb7110b)
+        ;
+
+        
+    
+    
+            marker_91a85a2d53fadb0fc493837b2b916116.bindTooltip(
+                `<div>
+                     Central European University IAS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_91a85a2d53fadb0fc493837b2b916116.setIcon(icon_9af91e8a685688aface756709cf90d15);
+            
+    
+            var marker_baeac7933a77182039289cc389d64e8e = L.marker(
+                [48.8566, 2.3522],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_32c597f1fa865f65640decf88480c2f1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_737105b46d695788debd10d9957071f0 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_6f03e65e20ff1af6b729b7e68d5f5c6f = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3BhcmlzLWllYS5mciIgdGFyZ2V0PSJfYmxhbmsiPjxiPlBhcmlzIEluc3RpdHV0ZSBmb3IgQWR2YW5jZWQgU3R1ZHk8L2I+PC9hPjxicj5QYXJpcywgRnJhbmNl" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_737105b46d695788debd10d9957071f0.setContent(i_frame_6f03e65e20ff1af6b729b7e68d5f5c6f);
+            
+        
+
+        marker_baeac7933a77182039289cc389d64e8e.bindPopup(popup_737105b46d695788debd10d9957071f0)
+        ;
+
+        
+    
+    
+            marker_baeac7933a77182039289cc389d64e8e.bindTooltip(
+                `<div>
+                     Paris Institute for Advanced Study
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_baeac7933a77182039289cc389d64e8e.setIcon(icon_32c597f1fa865f65640decf88480c2f1);
+            
+    
+            var marker_aa4f7a190e4896cbacb14ee5690d576a = L.marker(
+                [45.764, 4.8357],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_220bc9d4aa6479f79eacfd13cd0b9727 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_351f11cd6b93a6f48fcd75b1a8788406 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_457b20becc8d70812f73a17d72f76910 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2NvbGxlZ2l1bWRlbHlvbi5mciIgdGFyZ2V0PSJfYmxhbmsiPjxiPkNvbGxlZ2l1bSBkZSBMeW9uPC9iPjwvYT48YnI+THlvbiwgRnJhbmNl" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_351f11cd6b93a6f48fcd75b1a8788406.setContent(i_frame_457b20becc8d70812f73a17d72f76910);
+            
+        
+
+        marker_aa4f7a190e4896cbacb14ee5690d576a.bindPopup(popup_351f11cd6b93a6f48fcd75b1a8788406)
+        ;
+
+        
+    
+    
+            marker_aa4f7a190e4896cbacb14ee5690d576a.bindTooltip(
+                `<div>
+                     Collegium de Lyon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aa4f7a190e4896cbacb14ee5690d576a.setIcon(icon_220bc9d4aa6479f79eacfd13cd0b9727);
+            
+    
+            var marker_fc067d10c9a2abbb4654909876b254af = L.marker(
+                [53.5654, 9.9898],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_08bfb543acb43258d2f76fbbb56a41e4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fed4c76a3e0ea0b070c61f2d1aeb8826 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_131d35e68af5f1eb61316715ceda971f = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2hpYXMtaGFtYnVyZy5kZSIgdGFyZ2V0PSJfYmxhbmsiPjxiPkhJQVMgSGFtYnVyZzwvYj48L2E+PGJyPkhhbWJ1cmcsIEdlcm1hbnk=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_fed4c76a3e0ea0b070c61f2d1aeb8826.setContent(i_frame_131d35e68af5f1eb61316715ceda971f);
+            
+        
+
+        marker_fc067d10c9a2abbb4654909876b254af.bindPopup(popup_fed4c76a3e0ea0b070c61f2d1aeb8826)
+        ;
+
+        
+    
+    
+            marker_fc067d10c9a2abbb4654909876b254af.bindTooltip(
+                `<div>
+                     HIAS Hamburg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fc067d10c9a2abbb4654909876b254af.setIcon(icon_08bfb543acb43258d2f76fbbb56a41e4);
+            
+    
+            var marker_a6ab2d59e7f0612004b7b2a2ab4e83bb = L.marker(
+                [59.9142, 10.7101],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_3f4ffb71830a53b571b5582974f5f6fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2ba9b1679c21893f3257fa3c8c147095 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_36fc81dff5f46aef01834e19b4521c3a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2Nhcy1ub3J3YXkubm8iIHRhcmdldD0iX2JsYW5rIj48Yj5JQVMgTm9yd2VnaWFuIEFjYWRlbXkgb2YgU2NpZW5jZXMgT3NsbzwvYj48L2E+PGJyPk9zbG8sIE5vcndheQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_2ba9b1679c21893f3257fa3c8c147095.setContent(i_frame_36fc81dff5f46aef01834e19b4521c3a);
+            
+        
+
+        marker_a6ab2d59e7f0612004b7b2a2ab4e83bb.bindPopup(popup_2ba9b1679c21893f3257fa3c8c147095)
+        ;
+
+        
+    
+    
+            marker_a6ab2d59e7f0612004b7b2a2ab4e83bb.bindTooltip(
+                `<div>
+                     IAS Norwegian Academy of Sciences Oslo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a6ab2d59e7f0612004b7b2a2ab4e83bb.setIcon(icon_3f4ffb71830a53b571b5582974f5f6fe);
+            
+    
+            var marker_48485a7a9f5e979c0a93b3fdfa25347b = L.marker(
+                [47.3784, 8.5492],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_7d1838bd480c4f8b0728a1819c4dd6d4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6de6eb1f28fd2c90c5cbe109d3762920 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_b56d0acbc44bb467a06b8398c24e7910 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2NvbGxlZ2l1bS5ldGh6LmNoIiB0YXJnZXQ9Il9ibGFuayI+PGI+Q29sbGVnaXVtIEhlbHZldGljdW0gWnVyaWNoPC9iPjwvYT48YnI+WnVyaWNoLCBTd2l0emVybGFuZA==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_6de6eb1f28fd2c90c5cbe109d3762920.setContent(i_frame_b56d0acbc44bb467a06b8398c24e7910);
+            
+        
+
+        marker_48485a7a9f5e979c0a93b3fdfa25347b.bindPopup(popup_6de6eb1f28fd2c90c5cbe109d3762920)
+        ;
+
+        
+    
+    
+            marker_48485a7a9f5e979c0a93b3fdfa25347b.bindTooltip(
+                `<div>
+                     Collegium Helveticum Zurich
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_48485a7a9f5e979c0a93b3fdfa25347b.setIcon(icon_7d1838bd480c4f8b0728a1819c4dd6d4);
+            
+    
+            var marker_6a101808f496ce30a51ec4fe0a280aa6 = L.marker(
+                [43.3051, 5.3952],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_38076aec2e7bd412312d50e139e92740 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3497a4156ee1e106f1b7dd230bd04925 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_092b82c8b6f55e2a8718e3b9c38d7f77 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2ltZXJhLmZyIiB0YXJnZXQ9Il9ibGFuayI+PGI+SU1FUkEgTWFyc2VpbGxlPC9iPjwvYT48YnI+TWFyc2VpbGxlLCBGcmFuY2U=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_3497a4156ee1e106f1b7dd230bd04925.setContent(i_frame_092b82c8b6f55e2a8718e3b9c38d7f77);
+            
+        
+
+        marker_6a101808f496ce30a51ec4fe0a280aa6.bindPopup(popup_3497a4156ee1e106f1b7dd230bd04925)
+        ;
+
+        
+    
+    
+            marker_6a101808f496ce30a51ec4fe0a280aa6.bindTooltip(
+                `<div>
+                     IMERA Marseille
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6a101808f496ce30a51ec4fe0a280aa6.setIcon(icon_38076aec2e7bd412312d50e139e92740);
+            
+    
+            var marker_8952cf670624800f7fa5dc80ce139fdf = L.marker(
+                [52.0366, 8.4938],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_f076b77f371cec1989f6e252d72a9be3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cbb4b914355eeade363bb08cb0232283 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_207678f93cde297dafcebc99a32df9cd = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3VuaS1iaWVsZWZlbGQuZGUvemlmIiB0YXJnZXQ9Il9ibGFuayI+PGI+WklGIEJpZWxlZmVsZDwvYj48L2E+PGJyPkJpZWxlZmVsZCwgR2VybWFueQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_cbb4b914355eeade363bb08cb0232283.setContent(i_frame_207678f93cde297dafcebc99a32df9cd);
+            
+        
+
+        marker_8952cf670624800f7fa5dc80ce139fdf.bindPopup(popup_cbb4b914355eeade363bb08cb0232283)
+        ;
+
+        
+    
+    
+            marker_8952cf670624800f7fa5dc80ce139fdf.bindTooltip(
+                `<div>
+                     ZIF Bielefeld
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8952cf670624800f7fa5dc80ce139fdf.setIcon(icon_f076b77f371cec1989f6e252d72a9be3);
+            
+    
+            var marker_3c52f14804a94e7d416ecf50f964e6cd = L.marker(
+                [48.22714414, 16.3641415],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_d2e788bebab90fdc4ad7eea51159f0b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cb60dce8a28da5072a7c8f9a19da29eb = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_0fc95549c24bc3bd934f3771d69a845e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3d3dy5pd20uYXQiIHRhcmdldD0iX2JsYW5rIj48Yj5JbnN0aXR1dGUgZm9yIEh1bWFuIFNjaWVuY2VzIChJV00pPC9iPjwvYT48YnI+Vmllbm5hLCBBdXN0cmlh" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_cb60dce8a28da5072a7c8f9a19da29eb.setContent(i_frame_0fc95549c24bc3bd934f3771d69a845e);
+            
+        
+
+        marker_3c52f14804a94e7d416ecf50f964e6cd.bindPopup(popup_cb60dce8a28da5072a7c8f9a19da29eb)
+        ;
+
+        
+    
+    
+            marker_3c52f14804a94e7d416ecf50f964e6cd.bindTooltip(
+                `<div>
+                     Institute for Human Sciences (IWM)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3c52f14804a94e7d416ecf50f964e6cd.setIcon(icon_d2e788bebab90fdc4ad7eea51159f0b5);
+            
+    
+            var marker_974e8bc7b45ef33524a680ec5bd64218 = L.marker(
+                [-33.9321, 18.8602],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_aff0ac3f8e1b781c5e2bb3497de08755 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f1d296594e4594c0e33d59d2f2ef015a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_dfeffe5ec6e7b63a7750b9e0ba7c502a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3N0aWFzLmFjLnphIiB0YXJnZXQ9Il9ibGFuayI+PGI+U3RlbGxlbmJvc2NoIEluc3RpdHV0ZSBmb3IgQWR2YW5jZWQgU3R1ZHkgKFNUSUFTKTwvYj48L2E+PGJyPlN0ZWxsZW5ib3NjaCwgU291dGggQWZyaWNh" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_f1d296594e4594c0e33d59d2f2ef015a.setContent(i_frame_dfeffe5ec6e7b63a7750b9e0ba7c502a);
+            
+        
+
+        marker_974e8bc7b45ef33524a680ec5bd64218.bindPopup(popup_f1d296594e4594c0e33d59d2f2ef015a)
+        ;
+
+        
+    
+    
+            marker_974e8bc7b45ef33524a680ec5bd64218.bindTooltip(
+                `<div>
+                     Stellenbosch Institute for Advanced Study (STIAS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_974e8bc7b45ef33524a680ec5bd64218.setIcon(icon_aff0ac3f8e1b781c5e2bb3497de08755);
+            
+    
+            var marker_e8f92c8c223ef794e6e5abb8d94fdde8 = L.marker(
+                [35.9936, -78.8189],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_2e16f53f1d611d0be2a2afc04fad6c7b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_642f524668d0a0f016ad523e5ae884f9 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_9361566177c63042f40da0c2e1127a90 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL25hdGlvbmFsaHVtYW5pdGllc2NlbnRlci5vcmciIHRhcmdldD0iX2JsYW5rIj48Yj5OYXRpb25hbCBIdW1hbml0aWVzIENlbnRlcjwvYj48L2E+PGJyPlJlc2VhcmNoIFRyaWFuZ2xlIFBhcmssIFVTQQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_642f524668d0a0f016ad523e5ae884f9.setContent(i_frame_9361566177c63042f40da0c2e1127a90);
+            
+        
+
+        marker_e8f92c8c223ef794e6e5abb8d94fdde8.bindPopup(popup_642f524668d0a0f016ad523e5ae884f9)
+        ;
+
+        
+    
+    
+            marker_e8f92c8c223ef794e6e5abb8d94fdde8.bindTooltip(
+                `<div>
+                     National Humanities Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e8f92c8c223ef794e6e5abb8d94fdde8.setIcon(icon_2e16f53f1d611d0be2a2afc04fad6c7b);
+            
+    
+            var marker_03724d64d4fe4451b9fcb9a591ddb32e = L.marker(
+                [42.3736, -71.1097],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_fd59f3d1ca404c7b229db14f24bfab00 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5843075690c0b7a3925195e5726ff83b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_53cb37d05a85b1aa336abf4af5cc09e0 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3JhZGNsaWZmZS5oYXJ2YXJkLmVkdSIgdGFyZ2V0PSJfYmxhbmsiPjxiPlJhZGNsaWZmZSBJbnN0aXR1dGUgZm9yIEFkdmFuY2VkIFN0dWR5PC9iPjwvYT48YnI+Q2FtYnJpZGdlLCBVU0E=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_5843075690c0b7a3925195e5726ff83b.setContent(i_frame_53cb37d05a85b1aa336abf4af5cc09e0);
+            
+        
+
+        marker_03724d64d4fe4451b9fcb9a591ddb32e.bindPopup(popup_5843075690c0b7a3925195e5726ff83b)
+        ;
+
+        
+    
+    
+            marker_03724d64d4fe4451b9fcb9a591ddb32e.bindTooltip(
+                `<div>
+                     Radcliffe Institute for Advanced Study
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_03724d64d4fe4451b9fcb9a591ddb32e.setIcon(icon_fd59f3d1ca404c7b229db14f24bfab00);
+            
+    
+            var marker_dca46cde8dbe0d3e0a66c76b93c92ec3 = L.marker(
+                [48.5734, 7.743],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_e23ba98b581eb8c012a3b54b32a0928c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ace8c0585b088918ecfd3f03c402f7aa = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_b80e9fa41e5d4f05847881fadd79322a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3VzaWFzLnVuaXN0cmEuZnIiIHRhcmdldD0iX2JsYW5rIj48Yj5Vbml2ZXJzaXR5IG9mIFN0cmFzYm91cmcgSUFTIChVU0lBUyk8L2I+PC9hPjxicj5TdHJhc2JvdXJnLCBGcmFuY2U=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_ace8c0585b088918ecfd3f03c402f7aa.setContent(i_frame_b80e9fa41e5d4f05847881fadd79322a);
+            
+        
+
+        marker_dca46cde8dbe0d3e0a66c76b93c92ec3.bindPopup(popup_ace8c0585b088918ecfd3f03c402f7aa)
+        ;
+
+        
+    
+    
+            marker_dca46cde8dbe0d3e0a66c76b93c92ec3.bindTooltip(
+                `<div>
+                     University of Strasbourg IAS (USIAS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dca46cde8dbe0d3e0a66c76b93c92ec3.setIcon(icon_e23ba98b581eb8c012a3b54b32a0928c);
+            
+    
+            var marker_f727c9a8e5b06393dbd7087e9de29f63 = L.marker(
+                [48.1372, 11.582],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_e630e5245a8ea37cac739b3f2db2ace5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_40bb10de3c5cedc1832b71bd95b4db46 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_f198d4f5ad7cf122f4a875aa17bf233e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2Nhcy5sbXUuZGUiIHRhcmdldD0iX2JsYW5rIj48Yj5DZW50ZXIgZm9yIEFkdmFuY2VkIFN0dWRpZXMgKENBUyBMTVUpPC9iPjwvYT48YnI+TXVuaWNoLCBHZXJtYW55" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_40bb10de3c5cedc1832b71bd95b4db46.setContent(i_frame_f198d4f5ad7cf122f4a875aa17bf233e);
+            
+        
+
+        marker_f727c9a8e5b06393dbd7087e9de29f63.bindPopup(popup_40bb10de3c5cedc1832b71bd95b4db46)
+        ;
+
+        
+    
+    
+            marker_f727c9a8e5b06393dbd7087e9de29f63.bindTooltip(
+                `<div>
+                     Center for Advanced Studies (CAS LMU)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f727c9a8e5b06393dbd7087e9de29f63.setIcon(icon_e630e5245a8ea37cac739b3f2db2ace5);
+            
+    
+            var marker_dd5e7434c7819cbd965e883d6014f12a = L.marker(
+                [48.1498, 11.6015],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_d27ef3b47d86c33ee85c12bad3a7c6d5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bc0bf3060217153578b5ed3e4598d88c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_add888751dd4cf2a9a1ad588843b55be = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2lhcy50dW0uZGUiIHRhcmdldD0iX2JsYW5rIj48Yj5UVU0gSW5zdGl0dXRlIGZvciBBZHZhbmNlZCBTdHVkeSAoVFVNLUlBUyk8L2I+PC9hPjxicj5NdW5pY2gsIEdlcm1hbnk=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_bc0bf3060217153578b5ed3e4598d88c.setContent(i_frame_add888751dd4cf2a9a1ad588843b55be);
+            
+        
+
+        marker_dd5e7434c7819cbd965e883d6014f12a.bindPopup(popup_bc0bf3060217153578b5ed3e4598d88c)
+        ;
+
+        
+    
+    
+            marker_dd5e7434c7819cbd965e883d6014f12a.bindTooltip(
+                `<div>
+                     TUM Institute for Advanced Study (TUM-IAS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dd5e7434c7819cbd965e883d6014f12a.setIcon(icon_d27ef3b47d86c33ee85c12bad3a7c6d5);
+            
+    
+            var marker_0e22bb65120a73f3287f2d4d873a129e = L.marker(
+                [50.8784, 4.7044],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_14fd5a9b8a18b729c74ab2363861556a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a91ead288f243a688f5c1ddf6ab8c56e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_815fafc35691fe9630e9565d59a5232b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2t1bGV1dmVuLmJlIiB0YXJnZXQ9Il9ibGFuayI+PGI+TGV1dmVuIENlbnRyZSBmb3IgQWR2YW5jZWQgU3R1ZHk8L2I+PC9hPjxicj5MZXV2ZW4sIEJlbGdpdW0=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_a91ead288f243a688f5c1ddf6ab8c56e.setContent(i_frame_815fafc35691fe9630e9565d59a5232b);
+            
+        
+
+        marker_0e22bb65120a73f3287f2d4d873a129e.bindPopup(popup_a91ead288f243a688f5c1ddf6ab8c56e)
+        ;
+
+        
+    
+    
+            marker_0e22bb65120a73f3287f2d4d873a129e.bindTooltip(
+                `<div>
+                     Leuven Centre for Advanced Study
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0e22bb65120a73f3287f2d4d873a129e.setIcon(icon_14fd5a9b8a18b729c74ab2363861556a);
+            
+    
+            var marker_b1022905853ffe06abc970d6cc34c158 = L.marker(
+                [60.4518, 22.266],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_249dae6b381a53811efadaeedc9aa1ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d69f2cf0617ed2b68f870497d47488e1 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_e2123634ad00e0865f72fa44d3930a33 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3V0dS5maS90aWFzIiB0YXJnZXQ9Il9ibGFuayI+PGI+VHVya3UgSW5zdGl0dXRlIGZvciBBZHZhbmNlZCBTdHVkaWVzIChUSUFTKTwvYj48L2E+PGJyPlR1cmt1LCBGaW5sYW5k" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_d69f2cf0617ed2b68f870497d47488e1.setContent(i_frame_e2123634ad00e0865f72fa44d3930a33);
+            
+        
+
+        marker_b1022905853ffe06abc970d6cc34c158.bindPopup(popup_d69f2cf0617ed2b68f870497d47488e1)
+        ;
+
+        
+    
+    
+            marker_b1022905853ffe06abc970d6cc34c158.bindTooltip(
+                `<div>
+                     Turku Institute for Advanced Studies (TIAS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b1022905853ffe06abc970d6cc34c158.setIcon(icon_249dae6b381a53811efadaeedc9aa1ba);
+            
+    
+            var marker_592af93d0b83aa1084176ec1e477084a = L.marker(
+                [61.4981, 23.761],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_d9c21ad01fbf34a1d542addd21b2ea5f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd512f8d439af2a39aa5a374f467a7e6 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_085d570ff4a409991f7e935241ab6df6 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3R1bmkuZmkiIHRhcmdldD0iX2JsYW5rIj48Yj5UYW1wZXJlIEluc3RpdHV0ZSBmb3IgQWR2YW5jZWQgU3R1ZHk8L2I+PC9hPjxicj5UYW1wZXJlLCBGaW5sYW5k" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_bd512f8d439af2a39aa5a374f467a7e6.setContent(i_frame_085d570ff4a409991f7e935241ab6df6);
+            
+        
+
+        marker_592af93d0b83aa1084176ec1e477084a.bindPopup(popup_bd512f8d439af2a39aa5a374f467a7e6)
+        ;
+
+        
+    
+    
+            marker_592af93d0b83aa1084176ec1e477084a.bindTooltip(
+                `<div>
+                     Tampere Institute for Advanced Study
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_592af93d0b83aa1084176ec1e477084a.setIcon(icon_d9c21ad01fbf34a1d542addd21b2ea5f);
+            
+    
+            var marker_ea086a295ed0913360d40539d5d2eb7e = L.marker(
+                [54.775, -1.575],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_e74835b70f63fb8b7516f3f357b1529d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_efe17533c2650ea3e825e51428e06329 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_aab15b1928c6ca99d845aa0ff00a8344 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2R1cmhhbS5hYy51ay9pYXMiIHRhcmdldD0iX2JsYW5rIj48Yj5JbnN0aXR1dGUgZm9yIEFkdmFuY2VkIFN0dWR5IER1cmhhbTwvYj48L2E+PGJyPkR1cmhhbSwgVUs=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_efe17533c2650ea3e825e51428e06329.setContent(i_frame_aab15b1928c6ca99d845aa0ff00a8344);
+            
+        
+
+        marker_ea086a295ed0913360d40539d5d2eb7e.bindPopup(popup_efe17533c2650ea3e825e51428e06329)
+        ;
+
+        
+    
+    
+            marker_ea086a295ed0913360d40539d5d2eb7e.bindTooltip(
+                `<div>
+                     Institute for Advanced Study Durham
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ea086a295ed0913360d40539d5d2eb7e.setIcon(icon_e74835b70f63fb8b7516f3f357b1529d);
+            
+    
+            var marker_af50c10972e7ff4f27756caf2ea36287 = L.marker(
+                [52.3816, -1.558],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_d0204905368e50a22ac89d3ad5905698 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb99429c4fcee2a03ccf3648a4940efd = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_647440946dc49b91cf009159f226aceb = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3dhcndpY2suYWMudWsvaWFzIiB0YXJnZXQ9Il9ibGFuayI+PGI+SW5zdGl0dXRlIG9mIEFkdmFuY2VkIFN0dWR5IFdhcndpY2s8L2I+PC9hPjxicj5Db3ZlbnRyeSwgVUs=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_fb99429c4fcee2a03ccf3648a4940efd.setContent(i_frame_647440946dc49b91cf009159f226aceb);
+            
+        
+
+        marker_af50c10972e7ff4f27756caf2ea36287.bindPopup(popup_fb99429c4fcee2a03ccf3648a4940efd)
+        ;
+
+        
+    
+    
+            marker_af50c10972e7ff4f27756caf2ea36287.bindTooltip(
+                `<div>
+                     Institute of Advanced Study Warwick
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_af50c10972e7ff4f27756caf2ea36287.setIcon(icon_d0204905368e50a22ac89d3ad5905698);
+            
+    
+            var marker_c79f28d0d7a0538f4dbd827301b5cd30 = L.marker(
+                [52.453, -1.9245],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_7235811400b88b29cfdba0f3cf20fc6e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a05eccb4693afa1820b45f4d37eaaff = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_d5e97db574c81475a08981b2d64010d0 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2Jpcm1pbmdoYW0uYWMudWsvaWFzIiB0YXJnZXQ9Il9ibGFuayI+PGI+SW5zdGl0dXRlIG9mIEFkdmFuY2VkIFN0dWR5IEJpcm1pbmdoYW08L2I+PC9hPjxicj5CaXJtaW5naGFtLCBVSw==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_3a05eccb4693afa1820b45f4d37eaaff.setContent(i_frame_d5e97db574c81475a08981b2d64010d0);
+            
+        
+
+        marker_c79f28d0d7a0538f4dbd827301b5cd30.bindPopup(popup_3a05eccb4693afa1820b45f4d37eaaff)
+        ;
+
+        
+    
+    
+            marker_c79f28d0d7a0538f4dbd827301b5cd30.bindTooltip(
+                `<div>
+                     Institute of Advanced Study Birmingham
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c79f28d0d7a0538f4dbd827301b5cd30.setIcon(icon_7235811400b88b29cfdba0f3cf20fc6e);
+            
+    
+            var marker_f26d23d8b3ef35e3a7f851eb5dc92564 = L.marker(
+                [51.5194, -0.1301],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_42f31e15d3eae5c9f621cfc6063e3dec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94e6ba98b1a499a9c8abadf2796096fd = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_0463fa41f50661fdc8e831f1ec6d8797 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3Nhcy5hYy51ayIgdGFyZ2V0PSJfYmxhbmsiPjxiPlNjaG9vbCBvZiBBZHZhbmNlZCBTdHVkeSBMb25kb248L2I+PC9hPjxicj5Mb25kb24sIFVL" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_94e6ba98b1a499a9c8abadf2796096fd.setContent(i_frame_0463fa41f50661fdc8e831f1ec6d8797);
+            
+        
+
+        marker_f26d23d8b3ef35e3a7f851eb5dc92564.bindPopup(popup_94e6ba98b1a499a9c8abadf2796096fd)
+        ;
+
+        
+    
+    
+            marker_f26d23d8b3ef35e3a7f851eb5dc92564.bindTooltip(
+                `<div>
+                     School of Advanced Study London
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f26d23d8b3ef35e3a7f851eb5dc92564.setIcon(icon_42f31e15d3eae5c9f621cfc6063e3dec);
+            
+    
+            var marker_0df9757ed54f41475837b13c64bf75f4 = L.marker(
+                [51.5228, -0.133],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_95cfaddeb549afacb3bbbce868432d58 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4f49b609937df77e3e20bd0e6451f724 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_4fce304364f7d008e61a4f4b1e1ce11a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3VjbC5hYy51ay9pYXMiIHRhcmdldD0iX2JsYW5rIj48Yj5Vbml2ZXJzaXR5IENvbGxlZ2UgTG9uZG9uIElBUzwvYj48L2E+PGJyPkxvbmRvbiwgVUs=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_4f49b609937df77e3e20bd0e6451f724.setContent(i_frame_4fce304364f7d008e61a4f4b1e1ce11a);
+            
+        
+
+        marker_0df9757ed54f41475837b13c64bf75f4.bindPopup(popup_4f49b609937df77e3e20bd0e6451f724)
+        ;
+
+        
+    
+    
+            marker_0df9757ed54f41475837b13c64bf75f4.bindTooltip(
+                `<div>
+                     University College London IAS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0df9757ed54f41475837b13c64bf75f4.setIcon(icon_95cfaddeb549afacb3bbbce868432d58);
+            
+    
+            var marker_af67e32dbaa5ee6f930a1429f8389418 = L.marker(
+                [51.4545, -2.6081],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_a4a6977025e32c07d686e20f31fa2de0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8da42a07c4794e7027a346234b278973 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_5112b24f26aeabcfd614bc569c05fbf3 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2JyaXN0b2wuYWMudWsvaWFzIiB0YXJnZXQ9Il9ibGFuayI+PGI+VW5pdmVyc2l0eSBvZiBCcmlzdG9sIElBUzwvYj48L2E+PGJyPkJyaXN0b2wsIFVL" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_8da42a07c4794e7027a346234b278973.setContent(i_frame_5112b24f26aeabcfd614bc569c05fbf3);
+            
+        
+
+        marker_af67e32dbaa5ee6f930a1429f8389418.bindPopup(popup_8da42a07c4794e7027a346234b278973)
+        ;
+
+        
+    
+    
+            marker_af67e32dbaa5ee6f930a1429f8389418.bindTooltip(
+                `<div>
+                     University of Bristol IAS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_af67e32dbaa5ee6f930a1429f8389418.setIcon(icon_a4a6977025e32c07d686e20f31fa2de0);
+            
+    
+            var marker_041cb7c35782a2470656017a41b9cc3e = L.marker(
+                [52.946, -1.1581],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_0d2c29311ad2c7e017904c0e2261d364 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3d1e0230e92a5d7ca0880ba350aaebb0 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_b0485c2f31510d4afb2eb027a33286df = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL25vdHRpbmdoYW0uYWMudWsvaWFzIiB0YXJnZXQ9Il9ibGFuayI+PGI+VW5pdmVyc2l0eSBvZiBOb3R0aW5naGFtIElBUzwvYj48L2E+PGJyPk5vdHRpbmdoYW0sIFVL" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_3d1e0230e92a5d7ca0880ba350aaebb0.setContent(i_frame_b0485c2f31510d4afb2eb027a33286df);
+            
+        
+
+        marker_041cb7c35782a2470656017a41b9cc3e.bindPopup(popup_3d1e0230e92a5d7ca0880ba350aaebb0)
+        ;
+
+        
+    
+    
+            marker_041cb7c35782a2470656017a41b9cc3e.bindTooltip(
+                `<div>
+                     University of Nottingham IAS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_041cb7c35782a2470656017a41b9cc3e.setIcon(icon_0d2c29311ad2c7e017904c0e2261d364);
+            
+    
+            var marker_b0632932bcd8370ddb04b42343ec0518 = L.marker(
+                [51.1128, 1.0718],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_b3814763e755bc0de5427daafb716659 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e6c721ec8ba2b6732e0bdc619bddff96 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_dc218bdf4b5bb69d9ccd87b874956554 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2tlbnQuYWMudWsvaWFzIiB0YXJnZXQ9Il9ibGFuayI+PGI+VW5pdmVyc2l0eSBvZiBLZW50IElBUzwvYj48L2E+PGJyPkNhbnRlcmJ1cnksIFVL" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_e6c721ec8ba2b6732e0bdc619bddff96.setContent(i_frame_dc218bdf4b5bb69d9ccd87b874956554);
+            
+        
+
+        marker_b0632932bcd8370ddb04b42343ec0518.bindPopup(popup_e6c721ec8ba2b6732e0bdc619bddff96)
+        ;
+
+        
+    
+    
+            marker_b0632932bcd8370ddb04b42343ec0518.bindTooltip(
+                `<div>
+                     University of Kent IAS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b0632932bcd8370ddb04b42343ec0518.setIcon(icon_b3814763e755bc0de5427daafb716659);
+            
+    
+            var marker_6899eb50e3e4d8f02197f3d3f84741ab = L.marker(
+                [50.864, -0.1278],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_1f60322bd5549248f308e35d91c24bf7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_808c5a0ebed765b3c4fc9f703286c926 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_272696a2a848d616a3f849907bec7cf8 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3N1c3NleC5hYy51ay9pYXMiIHRhcmdldD0iX2JsYW5rIj48Yj5Vbml2ZXJzaXR5IG9mIFN1c3NleCBJQVM8L2I+PC9hPjxicj5CcmlnaHRvbiwgVUs=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_808c5a0ebed765b3c4fc9f703286c926.setContent(i_frame_272696a2a848d616a3f849907bec7cf8);
+            
+        
+
+        marker_6899eb50e3e4d8f02197f3d3f84741ab.bindPopup(popup_808c5a0ebed765b3c4fc9f703286c926)
+        ;
+
+        
+    
+    
+            marker_6899eb50e3e4d8f02197f3d3f84741ab.bindTooltip(
+                `<div>
+                     University of Sussex IAS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6899eb50e3e4d8f02197f3d3f84741ab.setIcon(icon_1f60322bd5549248f308e35d91c24bf7);
+            
+    
+            var marker_e2c50ef088ebc4610af98140cdcd0e3f = L.marker(
+                [37.4275, -122.1697],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_8523b6ad1a46ddabb567cd12c7ed2576 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e4a21458a51f4f4e6641ced212a2bd1b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_c559a62305c943f284ab7de183f70342 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2Nhc2JzLnN0YW5mb3JkLmVkdSIgdGFyZ2V0PSJfYmxhbmsiPjxiPkNlbnRlciBmb3IgQWR2YW5jZWQgU3R1ZHkgaW4gQmVoYXZpb3JhbCBTY2llbmNlczwvYj48L2E+PGJyPlN0YW5mb3JkLCBVU0E=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_e4a21458a51f4f4e6641ced212a2bd1b.setContent(i_frame_c559a62305c943f284ab7de183f70342);
+            
+        
+
+        marker_e2c50ef088ebc4610af98140cdcd0e3f.bindPopup(popup_e4a21458a51f4f4e6641ced212a2bd1b)
+        ;
+
+        
+    
+    
+            marker_e2c50ef088ebc4610af98140cdcd0e3f.bindTooltip(
+                `<div>
+                     Center for Advanced Study in Behavioral Sciences
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e2c50ef088ebc4610af98140cdcd0e3f.setIcon(icon_8523b6ad1a46ddabb567cd12c7ed2576);
+            
+    
+            var marker_d38ebb55746f3feaee4ea78863047eaf = L.marker(
+                [49.2639, -123.254],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_cdcfc0b334d918800f72cd383d397893 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62c0118ee6ec004a3e7788f011fb3118 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_8723e3fc9a8802522169ae787be45ef0 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3B3aWFzLnViYy5jYSIgdGFyZ2V0PSJfYmxhbmsiPjxiPlBldGVyIFdhbGwgSW5zdGl0dXRlIGZvciBBZHZhbmNlZCBTdHVkaWVzPC9iPjwvYT48YnI+VmFuY291dmVyLCBDYW5hZGE=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_62c0118ee6ec004a3e7788f011fb3118.setContent(i_frame_8723e3fc9a8802522169ae787be45ef0);
+            
+        
+
+        marker_d38ebb55746f3feaee4ea78863047eaf.bindPopup(popup_62c0118ee6ec004a3e7788f011fb3118)
+        ;
+
+        
+    
+    
+            marker_d38ebb55746f3feaee4ea78863047eaf.bindTooltip(
+                `<div>
+                     Peter Wall Institute for Advanced Studies
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d38ebb55746f3feaee4ea78863047eaf.setIcon(icon_cdcfc0b334d918800f72cd383d397893);
+            
+    
+            var marker_e1251a1c3eb27f6f83cc08d60fd64e1e = L.marker(
+                [43.6532, -79.3832],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_0b82770bbb936493b77441e4a3b00f17 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2cda75a7fd4022169b464af88179fec2 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_b0ff95a83142d2297330e2a7317af013 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2NpZmFyLmNhIiB0YXJnZXQ9Il9ibGFuayI+PGI+Q2FuYWRpYW4gSW5zdGl0dXRlIGZvciBBZHZhbmNlZCBSZXNlYXJjaCAoQ0lGQVIpPC9iPjwvYT48YnI+VG9yb250bywgQ2FuYWRh" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_2cda75a7fd4022169b464af88179fec2.setContent(i_frame_b0ff95a83142d2297330e2a7317af013);
+            
+        
+
+        marker_e1251a1c3eb27f6f83cc08d60fd64e1e.bindPopup(popup_2cda75a7fd4022169b464af88179fec2)
+        ;
+
+        
+    
+    
+            marker_e1251a1c3eb27f6f83cc08d60fd64e1e.bindTooltip(
+                `<div>
+                     Canadian Institute for Advanced Research (CIFAR)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e1251a1c3eb27f6f83cc08d60fd64e1e.setIcon(icon_0b82770bbb936493b77441e4a3b00f17);
+            
+    
+            var marker_00419cd2d1b2d39b66cc70c0dc81278f = L.marker(
+                [37.565, 126.9971],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_0090e4d01d8c91988fb1a5365abf9181 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_11069c0ea812c68e8aef5d7757f0b38a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_d359c5a737ddf022c0bc8a3f685637e8 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2tpYXMucmUua3IiIHRhcmdldD0iX2JsYW5rIj48Yj5Lb3JlYSBJbnN0aXR1dGUgZm9yIEFkdmFuY2VkIFN0dWR5IChLSUFTKTwvYj48L2E+PGJyPlNlb3VsLCBTb3V0aCBLb3JlYQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_11069c0ea812c68e8aef5d7757f0b38a.setContent(i_frame_d359c5a737ddf022c0bc8a3f685637e8);
+            
+        
+
+        marker_00419cd2d1b2d39b66cc70c0dc81278f.bindPopup(popup_11069c0ea812c68e8aef5d7757f0b38a)
+        ;
+
+        
+    
+    
+            marker_00419cd2d1b2d39b66cc70c0dc81278f.bindTooltip(
+                `<div>
+                     Korea Institute for Advanced Study (KIAS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_00419cd2d1b2d39b66cc70c0dc81278f.setIcon(icon_0090e4d01d8c91988fb1a5365abf9181);
+            
+    
+            var marker_c96e32833aab8a254d1ebef195995742 = L.marker(
+                [40.0, 116.326],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_5fc65a61f7242470f4d33118facb0661 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_28d2584b9cfd25a4ce9955ffeae13e17 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_1de28fad98e339390895d9b4399817ac = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3d3dy50c2luZ2h1YS5lZHUuY24iIHRhcmdldD0iX2JsYW5rIj48Yj5JbnN0aXR1dGUgZm9yIEFkdmFuY2VkIFN0dWR5IFRzaW5naHVhPC9iPjwvYT48YnI+QmVpamluZywgQ2hpbmE=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_28d2584b9cfd25a4ce9955ffeae13e17.setContent(i_frame_1de28fad98e339390895d9b4399817ac);
+            
+        
+
+        marker_c96e32833aab8a254d1ebef195995742.bindPopup(popup_28d2584b9cfd25a4ce9955ffeae13e17)
+        ;
+
+        
+    
+    
+            marker_c96e32833aab8a254d1ebef195995742.bindTooltip(
+                `<div>
+                     Institute for Advanced Study Tsinghua
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c96e32833aab8a254d1ebef195995742.setIcon(icon_5fc65a61f7242470f4d33118facb0661);
+            
+    
+            var marker_f014ea12a4ce8d28961102cb40a3de29 = L.marker(
+                [13.0827, 80.2707],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_4bc7d558e24252f5ba3a7075ced8555c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_968b35bb8b1988ca9bc1e9f793f7efe0 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_762188e7330c2f0be087765f9ae08436 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3Vub20uYWMuaW4vcmFtYW51amFuIiB0YXJnZXQ9Il9ibGFuayI+PGI+UmFtYW51amFuIEluc3RpdHV0ZSBmb3IgQWR2YW5jZWQgU3R1ZHk8L2I+PC9hPjxicj5DaGVubmFpLCBJbmRpYQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_968b35bb8b1988ca9bc1e9f793f7efe0.setContent(i_frame_762188e7330c2f0be087765f9ae08436);
+            
+        
+
+        marker_f014ea12a4ce8d28961102cb40a3de29.bindPopup(popup_968b35bb8b1988ca9bc1e9f793f7efe0)
+        ;
+
+        
+    
+    
+            marker_f014ea12a4ce8d28961102cb40a3de29.bindTooltip(
+                `<div>
+                     Ramanujan Institute for Advanced Study
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f014ea12a4ce8d28961102cb40a3de29.setIcon(icon_4bc7d558e24252f5ba3a7075ced8555c);
+            
+    
+            var marker_d230cbdf8e5f5d029e15ab70d6ef8cd6 = L.marker(
+                [12.9724, 77.5946],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_7a0967dc4e26ccf806bf22f35d843f8e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ca56a37bb4d41595e4597cfc2927715c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_455c81ddbfe5ad2cd840211d81e06355 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2lpc2MuYWMuaW4iIHRhcmdldD0iX2JsYW5rIj48Yj5JbmRpYW4gSW5zdGl0dXRlIG9mIFNjaWVuY2UgSUFTPC9iPjwvYT48YnI+QmFuZ2Fsb3JlLCBJbmRpYQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_ca56a37bb4d41595e4597cfc2927715c.setContent(i_frame_455c81ddbfe5ad2cd840211d81e06355);
+            
+        
+
+        marker_d230cbdf8e5f5d029e15ab70d6ef8cd6.bindPopup(popup_ca56a37bb4d41595e4597cfc2927715c)
+        ;
+
+        
+    
+    
+            marker_d230cbdf8e5f5d029e15ab70d6ef8cd6.bindTooltip(
+                `<div>
+                     Indian Institute of Science IAS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d230cbdf8e5f5d029e15ab70d6ef8cd6.setIcon(icon_7a0967dc4e26ccf806bf22f35d843f8e);
+            
+    
+            var marker_6d308ea037aaf6110fea88f9242772a7 = L.marker(
+                [-26.2041, 28.0436],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_2ea1d0ef10464fce5939f17c1679f3aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f9c25f280b99c187ae6e836d1e527a3e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_5cba649f9f94b28beddc822a5f59a5ca = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3VqLmFjLnphL2ppYXMiIHRhcmdldD0iX2JsYW5rIj48Yj5Kb2hhbm5lc2J1cmcgSUFTIChKSUFTKTwvYj48L2E+PGJyPkpvaGFubmVzYnVyZywgU291dGggQWZyaWNh" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_f9c25f280b99c187ae6e836d1e527a3e.setContent(i_frame_5cba649f9f94b28beddc822a5f59a5ca);
+            
+        
+
+        marker_6d308ea037aaf6110fea88f9242772a7.bindPopup(popup_f9c25f280b99c187ae6e836d1e527a3e)
+        ;
+
+        
+    
+    
+            marker_6d308ea037aaf6110fea88f9242772a7.bindTooltip(
+                `<div>
+                     Johannesburg IAS (JIAS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6d308ea037aaf6110fea88f9242772a7.setIcon(icon_2ea1d0ef10464fce5939f17c1679f3aa);
+            
+    
+            var marker_c333d24bc23f2c14beebca9a27f67de4 = L.marker(
+                [5.556, -0.1967],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_cd9a380ddb9c7a57e7b6e4a2f720f2ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_690080de630b0ffe40e8df659b500fdf = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_996c6186b9b129f7e942ab96d113c1aa = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3VnLmVkdS5naC9taWFzYSIgdGFyZ2V0PSJfYmxhbmsiPjxiPk1hcmlhIFNpYnlsbGEgTWVyaWFuIElBUyBBZnJpY2EgKE1JQVNBKTwvYj48L2E+PGJyPkFjY3JhLCBHaGFuYQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_690080de630b0ffe40e8df659b500fdf.setContent(i_frame_996c6186b9b129f7e942ab96d113c1aa);
+            
+        
+
+        marker_c333d24bc23f2c14beebca9a27f67de4.bindPopup(popup_690080de630b0ffe40e8df659b500fdf)
+        ;
+
+        
+    
+    
+            marker_c333d24bc23f2c14beebca9a27f67de4.bindTooltip(
+                `<div>
+                     Maria Sibylla Merian IAS Africa (MIASA)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c333d24bc23f2c14beebca9a27f67de4.setIcon(icon_cd9a380ddb9c7a57e7b6e4a2f720f2ed);
+            
+    
+            var marker_ba8180d9b7dada35de049e1364301c03 = L.marker(
+                [-31.979, 115.8216],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_96b60a2a99caa7d270ddbf61248e8399 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d1a24e0dcc8724b3037a0557884f7038 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_ffc04139fd4d5e9ec26a0d987b840c88 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3V3YS5lZHUuYXUvaWFzIiB0YXJnZXQ9Il9ibGFuayI+PGI+SW5zdGl0dXRlIG9mIEFkdmFuY2VkIFN0dWRpZXMgVVdBPC9iPjwvYT48YnI+UGVydGgsIEF1c3RyYWxpYQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_d1a24e0dcc8724b3037a0557884f7038.setContent(i_frame_ffc04139fd4d5e9ec26a0d987b840c88);
+            
+        
+
+        marker_ba8180d9b7dada35de049e1364301c03.bindPopup(popup_d1a24e0dcc8724b3037a0557884f7038)
+        ;
+
+        
+    
+    
+            marker_ba8180d9b7dada35de049e1364301c03.bindTooltip(
+                `<div>
+                     Institute of Advanced Studies UWA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ba8180d9b7dada35de049e1364301c03.setIcon(icon_96b60a2a99caa7d270ddbf61248e8399);
+            
+    
+            var marker_526038165855c26f3c8ed3ca804f54c3 = L.marker(
+                [43.723, 10.3966],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_04d40dad67eb3740719c774449f4de53 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f9d18833039aa22a7a7f6439a404652e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_74f06535c7b07545c3ebc88be10407b4 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3Nucy5pdCIgdGFyZ2V0PSJfYmxhbmsiPjxiPlNjdW9sYSBOb3JtYWxlIFN1cGVyaW9yZSBJQVM8L2I+PC9hPjxicj5QaXNhLCBJdGFseQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_f9d18833039aa22a7a7f6439a404652e.setContent(i_frame_74f06535c7b07545c3ebc88be10407b4);
+            
+        
+
+        marker_526038165855c26f3c8ed3ca804f54c3.bindPopup(popup_f9d18833039aa22a7a7f6439a404652e)
+        ;
+
+        
+    
+    
+            marker_526038165855c26f3c8ed3ca804f54c3.bindTooltip(
+                `<div>
+                     Scuola Normale Superiore IAS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_526038165855c26f3c8ed3ca804f54c3.setIcon(icon_04d40dad67eb3740719c774449f4de53);
+            
+    
+            var marker_e794e12031c235d348fa839e560896f3 = L.marker(
+                [51.45, 6.9959],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_29d3b3d20fb4b6ecddec2e73effe895e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12afa39c302cc93758ff9653a2b551e3 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_13749e77b0b34424e37c334415b0ff1e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2t3aS1ucncuZGUiIHRhcmdldD0iX2JsYW5rIj48Yj5JbnN0aXR1dGUgZm9yIEFkdmFuY2VkIFN0dWR5IGluIEh1bWFuaXRpZXMgKEtXSSk8L2I+PC9hPjxicj5Fc3NlbiwgR2VybWFueQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_12afa39c302cc93758ff9653a2b551e3.setContent(i_frame_13749e77b0b34424e37c334415b0ff1e);
+            
+        
+
+        marker_e794e12031c235d348fa839e560896f3.bindPopup(popup_12afa39c302cc93758ff9653a2b551e3)
+        ;
+
+        
+    
+    
+            marker_e794e12031c235d348fa839e560896f3.bindTooltip(
+                `<div>
+                     Institute for Advanced Study in Humanities (KWI)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e794e12031c235d348fa839e560896f3.setIcon(icon_29d3b3d20fb4b6ecddec2e73effe895e);
+            
+    
+            var marker_e5d64e24ecd2380344cd49b1a44b7f0b = L.marker(
+                [40.3487, -74.6593],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_8aec33ab6a6b41e89459556d88557ad7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_32b0008c88a8e57b45ffdae65724f097 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_b40a53e614f2c4265fb5642d02750af5 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3ByaW5jZXRvbi5lZHUvaWFzIiB0YXJnZXQ9Il9ibGFuayI+PGI+SW5zdGl0dXRlIGZvciBBZHZhbmNlZCBTdHVkeSBQcmluY2V0b24gVW5pdmVyc2l0eTwvYj48L2E+PGJyPlByaW5jZXRvbiwgVVNB" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_32b0008c88a8e57b45ffdae65724f097.setContent(i_frame_b40a53e614f2c4265fb5642d02750af5);
+            
+        
+
+        marker_e5d64e24ecd2380344cd49b1a44b7f0b.bindPopup(popup_32b0008c88a8e57b45ffdae65724f097)
+        ;
+
+        
+    
+    
+            marker_e5d64e24ecd2380344cd49b1a44b7f0b.bindTooltip(
+                `<div>
+                     Institute for Advanced Study Princeton University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e5d64e24ecd2380344cd49b1a44b7f0b.setIcon(icon_8aec33ab6a6b41e89459556d88557ad7);
+            
+    
+            var marker_a590328dc547eb28354627b055e9fbbf = L.marker(
+                [50.7753, 6.0839],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_786403fda57960350a7004a424393792 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b015c0722dc6753bd92abae080f70aef = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_f495e4af3d6b61954280ba5825d91f99 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2toay5yd3RoLWFhY2hlbi5kZSIgdGFyZ2V0PSJfYmxhbmsiPjxiPkvDg8KkdGUgSGFtYnVyZ2VyIEtvbGxlZzwvYj48L2E+PGJyPkFhY2hlbiwgR2VybWFueQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_b015c0722dc6753bd92abae080f70aef.setContent(i_frame_f495e4af3d6b61954280ba5825d91f99);
+            
+        
+
+        marker_a590328dc547eb28354627b055e9fbbf.bindPopup(popup_b015c0722dc6753bd92abae080f70aef)
+        ;
+
+        
+    
+    
+            marker_a590328dc547eb28354627b055e9fbbf.bindTooltip(
+                `<div>
+                     KÃ¤te Hamburger Kolleg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a590328dc547eb28354627b055e9fbbf.setIcon(icon_786403fda57960350a7004a424393792);
+            
+    
+            var marker_40d3e81f1dbd731a780c02f3b575367c = L.marker(
+                [51.7548, 0.9484],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_f533522a4b7085fb9545526a0a4200ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cdbc440d24b2a77fe830f4e6b84b8dc1 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_e32984eae719d4499ee23bd8eb968b8e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2Vzc2V4LmFjLnVrL2lhcyIgdGFyZ2V0PSJfYmxhbmsiPjxiPlVuaXZlcnNpdHkgb2YgRXNzZXggSUFTPC9iPjwvYT48YnI+Q29sY2hlc3RlciwgVUs=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_cdbc440d24b2a77fe830f4e6b84b8dc1.setContent(i_frame_e32984eae719d4499ee23bd8eb968b8e);
+            
+        
+
+        marker_40d3e81f1dbd731a780c02f3b575367c.bindPopup(popup_cdbc440d24b2a77fe830f4e6b84b8dc1)
+        ;
+
+        
+    
+    
+            marker_40d3e81f1dbd731a780c02f3b575367c.bindTooltip(
+                `<div>
+                     University of Essex IAS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_40d3e81f1dbd731a780c02f3b575367c.setIcon(icon_f533522a4b7085fb9545526a0a4200ba);
+            
+    
+            var marker_ad33e8f09283d835b4eb5163fb780dbe = L.marker(
+                [51.5238, -0.039],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_8a4b3102dc1b60ffb7ab849de62a11db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7ef675a33ac4a965de893719fd4b0c46 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_ab9e2cded5b7b1c78fc71a80c2457319 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3FtdWwuYWMudWsvaWFzIiB0YXJnZXQ9Il9ibGFuayI+PGI+UXVlZW4gTWFyeSBVbml2ZXJzaXR5IExvbmRvbiBJQVM8L2I+PC9hPjxicj5Mb25kb24sIFVL" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_7ef675a33ac4a965de893719fd4b0c46.setContent(i_frame_ab9e2cded5b7b1c78fc71a80c2457319);
+            
+        
+
+        marker_ad33e8f09283d835b4eb5163fb780dbe.bindPopup(popup_7ef675a33ac4a965de893719fd4b0c46)
+        ;
+
+        
+    
+    
+            marker_ad33e8f09283d835b4eb5163fb780dbe.bindTooltip(
+                `<div>
+                     Queen Mary University London IAS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ad33e8f09283d835b4eb5163fb780dbe.setIcon(icon_8a4b3102dc1b60ffb7ab849de62a11db);
+            
+    
+            var marker_ad970e3b98024303f450317261cdfeab = L.marker(
+                [1.3521, 103.6798],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_b5457d97caf286d5005f40e08e945517 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d08b0c393b785a6a9654e957bf9987bd = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_fa5c9673479dc5127959d088bcc22d07 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2lhcy5udHUuZWR1LnNnIiB0YXJnZXQ9Il9ibGFuayI+PGI+SW5zdGl0dXRlIGZvciBBZHZhbmNlZCBTdHVkeSBTaW5nYXBvcmU8L2I+PC9hPjxicj5TaW5nYXBvcmUsIFNpbmdhcG9yZQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_d08b0c393b785a6a9654e957bf9987bd.setContent(i_frame_fa5c9673479dc5127959d088bcc22d07);
+            
+        
+
+        marker_ad970e3b98024303f450317261cdfeab.bindPopup(popup_d08b0c393b785a6a9654e957bf9987bd)
+        ;
+
+        
+    
+    
+            marker_ad970e3b98024303f450317261cdfeab.bindTooltip(
+                `<div>
+                     Institute for Advanced Study Singapore
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ad970e3b98024303f450317261cdfeab.setIcon(icon_b5457d97caf286d5005f40e08e945517);
+            
+    
+            var marker_a7b5316d6206e2999fd0d6dca6d04f39 = L.marker(
+                [28.6139, 77.2577],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_7b2673caa2e4fffe2d41523910102993 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c1526fdc29ae036d7df4c5d7d19044ef = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_36ec551d401e653981d733d3ae088072 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2pudS5hYy5pbiIgdGFyZ2V0PSJfYmxhbmsiPjxiPkphd2FoYXJsYWwgTmVocnUgSW5zdGl0dXRlIG9mIEFkdmFuY2VkIFN0dWR5PC9iPjwvYT48YnI+TmV3IERlbGhpLCBJbmRpYQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_c1526fdc29ae036d7df4c5d7d19044ef.setContent(i_frame_36ec551d401e653981d733d3ae088072);
+            
+        
+
+        marker_a7b5316d6206e2999fd0d6dca6d04f39.bindPopup(popup_c1526fdc29ae036d7df4c5d7d19044ef)
+        ;
+
+        
+    
+    
+            marker_a7b5316d6206e2999fd0d6dca6d04f39.bindTooltip(
+                `<div>
+                     Jawaharlal Nehru Institute of Advanced Study
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a7b5316d6206e2999fd0d6dca6d04f39.setIcon(icon_7b2673caa2e4fffe2d41523910102993);
+            
+    
+            var marker_d227800a18c3510493a5f475727bd037 = L.marker(
+                [22.4183, 114.2634],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_fffd549c88484ad6d2dd244beeff9bc6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_180f8c635995e35d9b84bb4d2a241135 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_b284df204652b77e2d723292674beb91 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2lhcy5oa3VzdC5lZHUuaGsiIHRhcmdldD0iX2JsYW5rIj48Yj5JbnN0aXR1dGUgZm9yIEFkdmFuY2VkIFN0dWR5IEhvbmcgS29uZzwvYj48L2E+PGJyPkhvbmcgS29uZywgQ2hpbmE=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_180f8c635995e35d9b84bb4d2a241135.setContent(i_frame_b284df204652b77e2d723292674beb91);
+            
+        
+
+        marker_d227800a18c3510493a5f475727bd037.bindPopup(popup_180f8c635995e35d9b84bb4d2a241135)
+        ;
+
+        
+    
+    
+            marker_d227800a18c3510493a5f475727bd037.bindTooltip(
+                `<div>
+                     Institute for Advanced Study Hong Kong
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d227800a18c3510493a5f475727bd037.setIcon(icon_fffd549c88484ad6d2dd244beeff9bc6);
+            
+    
+            var marker_eb82b28afefa3a021f79cae57a865c0f = L.marker(
+                [35.0116, 135.7681],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_a6c7a8c3f04841deeb56b80b919beecb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5180038305e5228f42c1a0f6725ded81 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_55780384ee3bd1a7b5ca34c2c68f5ffc = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2t1aWFzLmt5b3RvLXUuYWMuanAiIHRhcmdldD0iX2JsYW5rIj48Yj5LeW90byBJQVM8L2I+PC9hPjxicj5LeW90bywgSmFwYW4=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_5180038305e5228f42c1a0f6725ded81.setContent(i_frame_55780384ee3bd1a7b5ca34c2c68f5ffc);
+            
+        
+
+        marker_eb82b28afefa3a021f79cae57a865c0f.bindPopup(popup_5180038305e5228f42c1a0f6725ded81)
+        ;
+
+        
+    
+    
+            marker_eb82b28afefa3a021f79cae57a865c0f.bindTooltip(
+                `<div>
+                     Kyoto IAS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eb82b28afefa3a021f79cae57a865c0f.setIcon(icon_a6c7a8c3f04841deeb56b80b919beecb);
+            
+    
+            var marker_dbc9a957f38b684f77a99e91d3de9676 = L.marker(
+                [51.2277, 6.7735],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_2a3dc2e34e736a81e2397ec074cb7f2f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a887c6d377a86310549c8a533f74029d = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_6ede077b729c4049d3bf1ec63e4c4241 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3dpa28tbnJ3LmRlIiB0YXJnZXQ9Il9ibGFuayI+PGI+V2lzc2Vuc2NoYWZ0c2tvbGxlZyBOb3JkcmhlaW4tV2VzdGZhbGVuPC9iPjwvYT48YnI+RMODwrxzc2VsZG9yZiwgR2VybWFueQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_a887c6d377a86310549c8a533f74029d.setContent(i_frame_6ede077b729c4049d3bf1ec63e4c4241);
+            
+        
+
+        marker_dbc9a957f38b684f77a99e91d3de9676.bindPopup(popup_a887c6d377a86310549c8a533f74029d)
+        ;
+
+        
+    
+    
+            marker_dbc9a957f38b684f77a99e91d3de9676.bindTooltip(
+                `<div>
+                     Wissenschaftskolleg Nordrhein-Westfalen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dbc9a957f38b684f77a99e91d3de9676.setIcon(icon_2a3dc2e34e736a81e2397ec074cb7f2f);
+            
+    
+            var marker_a5ea93c7fcaf3b66eca9550ad5f472fb = L.marker(
+                [53.2289, 10.4014],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_fce9053de687931c75ef4e0eb82cdf3f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1187b9e33352d32fc566eedf832082c4 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_cf306b38c3448cb80a2d296b8c3c7092 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2xldXBoYW5hLmRlL2xpYXMiIHRhcmdldD0iX2JsYW5rIj48Yj5MSUFTIEzDvG5lYnVyZzwvYj48L2E+PGJyPkzDvG5lYnVyZywgR2VybWFueQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_1187b9e33352d32fc566eedf832082c4.setContent(i_frame_cf306b38c3448cb80a2d296b8c3c7092);
+            
+        
+
+        marker_a5ea93c7fcaf3b66eca9550ad5f472fb.bindPopup(popup_1187b9e33352d32fc566eedf832082c4)
+        ;
+
+        
+    
+    
+            marker_a5ea93c7fcaf3b66eca9550ad5f472fb.bindTooltip(
+                `<div>
+                     LIAS Lüneburg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a5ea93c7fcaf3b66eca9550ad5f472fb.setIcon(icon_fce9053de687931c75ef4e0eb82cdf3f);
+            
+    
+            var marker_d8033b594e2479723fbc434fd492fe05 = L.marker(
+                [48.5244, 9.0531],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_0fd2cf79aed7b3654ffd6e4636098859 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_52dfe2e143a7dd019fd551a594bb8c3d = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_838a9e429377b056ca76bf2c5ca285bd = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3VuaS10dWViaW5nZW4uZGUvY29mIiB0YXJnZXQ9Il9ibGFuayI+PGI+Q29GIFTDvGJpbmdlbjwvYj48L2E+PGJyPlTDvGJpbmdlbiwgR2VybWFueQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_52dfe2e143a7dd019fd551a594bb8c3d.setContent(i_frame_838a9e429377b056ca76bf2c5ca285bd);
+            
+        
+
+        marker_d8033b594e2479723fbc434fd492fe05.bindPopup(popup_52dfe2e143a7dd019fd551a594bb8c3d)
+        ;
+
+        
+    
+    
+            marker_d8033b594e2479723fbc434fd492fe05.bindTooltip(
+                `<div>
+                     CoF Tübingen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d8033b594e2479723fbc434fd492fe05.setIcon(icon_0fd2cf79aed7b3654ffd6e4636098859);
+            
+    
+            var marker_1cc476e73755b6181bebdb984e0e253d = L.marker(
+                [46.4941, 11.3475],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_dbedd5423e5677fe71abf714af36ea69 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f9742f010cba6310dbb8fdf7416e7290 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_7a14c9e6dc615564fadec3759997dbff = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2V1cmFjLmVkdS9jYXMiIHRhcmdldD0iX2JsYW5rIj48Yj5DQVMgYXQgRVVSQUMgQm96ZW48L2I+PC9hPjxicj5Cb3plbiwgSXRhbHk=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_f9742f010cba6310dbb8fdf7416e7290.setContent(i_frame_7a14c9e6dc615564fadec3759997dbff);
+            
+        
+
+        marker_1cc476e73755b6181bebdb984e0e253d.bindPopup(popup_f9742f010cba6310dbb8fdf7416e7290)
+        ;
+
+        
+    
+    
+            marker_1cc476e73755b6181bebdb984e0e253d.bindTooltip(
+                `<div>
+                     CAS at EURAC Bozen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1cc476e73755b6181bebdb984e0e253d.setIcon(icon_dbedd5423e5677fe71abf714af36ea69);
+            
+    
+            var marker_4122d30bc51aa9f706349667b787162b = L.marker(
+                [47.6894, 9.1873],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_8a3e42e4e850b54f6d714f779135188b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b7862e365e8d2b7d3157651e9d369f01 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_2909a9bea476235bdd9023763177b005 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3VuaS1rb25zdGFuei5kZS96dWt1bmZ0c2tvbGxlZyIgdGFyZ2V0PSJfYmxhbmsiPjxiPlpVS08gS29uc3Rhbno8L2I+PC9hPjxicj5Lb25zdGFueiwgR2VybWFueQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_b7862e365e8d2b7d3157651e9d369f01.setContent(i_frame_2909a9bea476235bdd9023763177b005);
+            
+        
+
+        marker_4122d30bc51aa9f706349667b787162b.bindPopup(popup_b7862e365e8d2b7d3157651e9d369f01)
+        ;
+
+        
+    
+    
+            marker_4122d30bc51aa9f706349667b787162b.bindTooltip(
+                `<div>
+                     ZUKO Konstanz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4122d30bc51aa9f706349667b787162b.setIcon(icon_8a3e42e4e850b54f6d714f779135188b);
+            
+    
+            var marker_91236dc453a62a731023067da498b05d = L.marker(
+                [51.4475, 7.2608],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_a2dc62fa47aae9a8532e7bf7aa32aa65 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd4aee3ae45462a160244d9194bcdddd = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_39fedb7152edb6ecd9aacf7174da8c54 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL2NhaXMtcmVzZWFyY2guZGUiIHRhcmdldD0iX2JsYW5rIj48Yj5DQUlTIEVzc2VuL1J1aHIgPC9iPjwvYT48YnI+Qm9jaHVtLCBHZXJtYW55" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_bd4aee3ae45462a160244d9194bcdddd.setContent(i_frame_39fedb7152edb6ecd9aacf7174da8c54);
+            
+        
+
+        marker_91236dc453a62a731023067da498b05d.bindPopup(popup_bd4aee3ae45462a160244d9194bcdddd)
+        ;
+
+        
+    
+    
+            marker_91236dc453a62a731023067da498b05d.bindTooltip(
+                `<div>
+                     CAIS Essen/Ruhr 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_91236dc453a62a731023067da498b05d.setIcon(icon_a2dc62fa47aae9a8532e7bf7aa32aa65);
+            
+    
+            var marker_330583051e093f24e059850b0276db51 = L.marker(
+                [50.9912, 11.0113],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_d31d15971c914633587d527dc322fafc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_537666dc50073f8d61ed2cb0a27018a9 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_19dcdcc44082b415682ba60857df9bd4 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3VuaS1lcmZ1cnQuZGUvbWF4LXdlYmVyLWtvbGxlZyIgdGFyZ2V0PSJfYmxhbmsiPjxiPklBUyBFcmZ1cnQ8L2I+PC9hPjxicj5FcmZ1cnQsIEdlcm1hbnk=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_537666dc50073f8d61ed2cb0a27018a9.setContent(i_frame_19dcdcc44082b415682ba60857df9bd4);
+            
+        
+
+        marker_330583051e093f24e059850b0276db51.bindPopup(popup_537666dc50073f8d61ed2cb0a27018a9)
+        ;
+
+        
+    
+    
+            marker_330583051e093f24e059850b0276db51.bindTooltip(
+                `<div>
+                     IAS Erfurt
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_330583051e093f24e059850b0276db51.setIcon(icon_d31d15971c914633587d527dc322fafc);
+            
+    
+            var marker_2cfe765a9f42cdf3d167301961edf03d = L.marker(
+                [48.5684, 13.4526],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_f1186df5bdff70ec502e0eb145d69d43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5cd5fd701da4c872fa4ee9dfed5794d9 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_f60a304342a494e7cdd2fca4b838abae = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3VuaS1wYXNzYXUuZGUvcGljYWlzIiB0YXJnZXQ9Il9ibGFuayI+PGI+SUFTIFBhc3NhdTwvYj48L2E+PGJyPlBhc3NhdSwgR2VybWFueQ==" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_5cd5fd701da4c872fa4ee9dfed5794d9.setContent(i_frame_f60a304342a494e7cdd2fca4b838abae);
+            
+        
+
+        marker_2cfe765a9f42cdf3d167301961edf03d.bindPopup(popup_5cd5fd701da4c872fa4ee9dfed5794d9)
+        ;
+
+        
+    
+    
+            marker_2cfe765a9f42cdf3d167301961edf03d.bindTooltip(
+                `<div>
+                     IAS Passau
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2cfe765a9f42cdf3d167301961edf03d.setIcon(icon_f1186df5bdff70ec502e0eb145d69d43);
+            
+    
+            var marker_1a099d30a2282f2d276f462d34e6a20b = L.marker(
+                [54.0953, 13.3786],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_ed3bc36f40dba0c3daebc43daf602e92 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_61e7f52e22103a3f868ece4cc8b3fc16 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_bde34b3288dcadfa7149c191bc2ea051 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3dpa28tZ3JlaWZzd2FsZC5kZSIgdGFyZ2V0PSJfYmxhbmsiPjxiPldJS08gR3JlaWZzd2FsZDwvYj48L2E+PGJyPkdyZWlmc3dhbGQsIEdlcm1hbnk=" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_61e7f52e22103a3f868ece4cc8b3fc16.setContent(i_frame_bde34b3288dcadfa7149c191bc2ea051);
+            
+        
+
+        marker_1a099d30a2282f2d276f462d34e6a20b.bindPopup(popup_61e7f52e22103a3f868ece4cc8b3fc16)
+        ;
+
+        
+    
+    
+            marker_1a099d30a2282f2d276f462d34e6a20b.bindTooltip(
+                `<div>
+                     WIKO Greifswald
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1a099d30a2282f2d276f462d34e6a20b.setIcon(icon_ed3bc36f40dba0c3daebc43daf602e92);
+            
+    
+            var marker_c8cc543c83b964c04292bc8f2f509447 = L.marker(
+                [49.92632758, 11.58522207],
+                {
+}
+            ).addTo(map_f66fdc0f086ab631cedeb9cdbaf64405);
+        
+    
+            var icon_e75c860046e9ab94aaa49e0be7669242 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5ab88d52325d099533f144c9056dc944 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var i_frame_3a5d6748cfaf79fecf491883e532af1b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8YSBocmVmPSJodHRwczovL3VidGFrdHVlbGwudW5pLWJheXJldXRoLmRlL2h1bWJvbGR0LWNlbnRyZS1hZHZhbmNlZC1zdHVkaWVzIiB0YXJnZXQ9Il9ibGFuayI+PGI+SHVtYm9sZHQgQ2VudHJlIFVuaXZlcnNpdMOkdCBCYXlyZXV0aDwvYj48L2E+PGJyPkJheXJldXRoLCBHZXJtYW55" width="220" style="border:none !important;" height="80"></iframe>`)[0];
+                popup_5ab88d52325d099533f144c9056dc944.setContent(i_frame_3a5d6748cfaf79fecf491883e532af1b);
+            
+        
+
+        marker_c8cc543c83b964c04292bc8f2f509447.bindPopup(popup_5ab88d52325d099533f144c9056dc944)
+        ;
+
+        
+    
+    
+            marker_c8cc543c83b964c04292bc8f2f509447.bindTooltip(
+                `<div>
+                     Humboldt Centre Universität Bayreuth
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c8cc543c83b964c04292bc8f2f509447.setIcon(icon_e75c860046e9ab94aaa49e0be7669242);
+            
+</script>
+</html>

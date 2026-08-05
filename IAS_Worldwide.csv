@@ -1,0 +1,70 @@
+﻿Name,City,Country,Latitude,Longitude,Website,NetIAS
+Institute for Advanced Study (IAS),Princeton,USA,40.3487,-74.6593,ias.edu,yes
+Hanse-Wissenschaftskolleg (HWK),Delmenhorst,Germany,53.0375,8.6358,hanse-ias.de,yes
+Wissenschaftskolleg zu Berlin,Berlin,Germany,52.52,13.405,wiko-berlin.de,yes
+Swedish Collegium for Advanced Study (SCAS),Uppsala,Sweden,59.8585,17.6459,scasnet.org,yes
+Netherlands Institute for Advanced Study (NIAS),Amsterdam,Netherlands,52.3702,4.8897,nias.knaw.nl,yes
+Nantes IAS Foundation (FIAS),Nantes,France,47.2184,-1.5422,iea-nantes.fr,yes
+Israel Institute for Advanced Studies (IIAS),Jerusalem,Israel,31.7683,35.2137,iias.huji.ac.il,yes
+Aarhus Institute of Advanced Studies (AIAS),Aarhus,Denmark,56.1591,10.2039,aias.au.dk,yes
+Freiburg Institute for Advanced Studies (FRIAS),Freiburg,Germany,48.0099,7.8421,frias.uni-freiburg.de,yes
+Helsinki Collegium for Advanced Studies,Helsinki,Finland,60.1719,24.9384,helsinki.fi/collegium,yes
+CRASSH Cambridge,Cambridge,UK,52.2053,0.1179,crassh.cam.ac.uk,yes
+Institute for Advanced Studies Edinburgh,Edinburgh,UK,55.9441,-3.1883,ed.ac.uk/ias,yes
+Central European University IAS,Budapest,Hungary,47.50096276,19.04936039,ceu.edu,yes
+Paris Institute for Advanced Study,Paris,France,48.8566,2.3522,paris-iea.fr,yes
+Collegium de Lyon,Lyon,France,45.764,4.8357,collegiumdelyon.fr,yes
+HIAS Hamburg,Hamburg,Germany,53.5654,9.9898,hias-hamburg.de,yes
+IAS Norwegian Academy of Sciences Oslo,Oslo,Norway,59.9142,10.7101,cas-norway.no,yes
+Collegium Helveticum Zurich,Zurich,Switzerland,47.3784,8.5492,collegium.ethz.ch,yes
+IMERA Marseille,Marseille,France,43.3051,5.3952,imera.fr,yes
+ZIF Bielefeld,Bielefeld,Germany,52.0366,8.4938,uni-bielefeld.de/zif,yes
+Institute for Human Sciences (IWM),Vienna,Austria,48.22714414,16.3641415,www.iwm.at,yes
+Stellenbosch Institute for Advanced Study (STIAS),Stellenbosch,South Africa,-33.9321,18.8602,stias.ac.za,No
+National Humanities Center,Research Triangle Park,USA,35.9936,-78.8189,nationalhumanitiescenter.org,No
+Radcliffe Institute for Advanced Study,Cambridge,USA,42.3736,-71.1097,radcliffe.harvard.edu,No
+University of Strasbourg IAS (USIAS),Strasbourg,France,48.5734,7.743,usias.unistra.fr,No
+Center for Advanced Studies (CAS LMU),Munich,Germany,48.1372,11.582,cas.lmu.de,No
+TUM Institute for Advanced Study (TUM-IAS),Munich,Germany,48.1498,11.6015,ias.tum.de,No
+Leuven Centre for Advanced Study,Leuven,Belgium,50.8784,4.7044,kuleuven.be,No
+Turku Institute for Advanced Studies (TIAS),Turku,Finland,60.4518,22.266,utu.fi/tias,No
+Tampere Institute for Advanced Study,Tampere,Finland,61.4981,23.761,tuni.fi,No
+Institute for Advanced Study Durham,Durham,UK,54.775,-1.575,durham.ac.uk/ias,No
+Institute of Advanced Study Warwick,Coventry,UK,52.3816,-1.558,warwick.ac.uk/ias,No
+Institute of Advanced Study Birmingham,Birmingham,UK,52.453,-1.9245,birmingham.ac.uk/ias,No
+School of Advanced Study London,London,UK,51.5194,-0.1301,sas.ac.uk,No
+University College London IAS,London,UK,51.5228,-0.133,ucl.ac.uk/ias,No
+University of Bristol IAS,Bristol,UK,51.4545,-2.6081,bristol.ac.uk/ias,No
+University of Nottingham IAS,Nottingham,UK,52.946,-1.1581,nottingham.ac.uk/ias,No
+University of Kent IAS,Canterbury,UK,51.1128,1.0718,kent.ac.uk/ias,No
+University of Sussex IAS,Brighton,UK,50.864,-0.1278,sussex.ac.uk/ias,No
+Center for Advanced Study in Behavioral Sciences,Stanford,USA,37.4275,-122.1697,casbs.stanford.edu,No
+Peter Wall Institute for Advanced Studies,Vancouver,Canada,49.2639,-123.254,pwias.ubc.ca,No
+Canadian Institute for Advanced Research (CIFAR),Toronto,Canada,43.6532,-79.3832,cifar.ca,No
+Korea Institute for Advanced Study (KIAS),Seoul,South Korea,37.565,126.9971,kias.re.kr,No
+Institute for Advanced Study Tsinghua,Beijing,China,40,116.326,www.tsinghua.edu.cn,No
+Ramanujan Institute for Advanced Study,Chennai,India,13.0827,80.2707,unom.ac.in/ramanujan,No
+Indian Institute of Science IAS,Bangalore,India,12.9724,77.5946,iisc.ac.in,No
+Johannesburg IAS (JIAS),Johannesburg,South Africa,-26.2041,28.0436,uj.ac.za/jias,No
+Maria Sibylla Merian IAS Africa (MIASA),Accra,Ghana,5.556,-0.1967,ug.edu.gh/miasa,No
+Institute of Advanced Studies UWA,Perth,Australia,-31.979,115.8216,uwa.edu.au/ias,No
+Scuola Normale Superiore IAS,Pisa,Italy,43.723,10.3966,sns.it,No
+Institute for Advanced Study in Humanities (KWI),Essen,Germany,51.45,6.9959,kwi-nrw.de,No
+Institute for Advanced Study Princeton University,Princeton,USA,40.3487,-74.6593,princeton.edu/ias,No
+KÃ¤te Hamburger Kolleg,Aachen,Germany,50.7753,6.0839,khk.rwth-aachen.de,No
+University of Essex IAS,Colchester,UK,51.7548,0.9484,essex.ac.uk/ias,No
+Queen Mary University London IAS,London,UK,51.5238,-0.039,qmul.ac.uk/ias,No
+Institute for Advanced Study Singapore,Singapore,Singapore,1.3521,103.6798,ias.ntu.edu.sg,No
+Jawaharlal Nehru Institute of Advanced Study,New Delhi,India,28.6139,77.2577,jnu.ac.in,No
+Institute for Advanced Study Hong Kong,Hong Kong,China,22.4183,114.2634,ias.hkust.edu.hk,No
+Kyoto IAS,Kyoto,Japan,35.0116,135.7681,kuias.kyoto-u.ac.jp,No
+Wissenschaftskolleg Nordrhein-Westfalen,DÃ¼sseldorf,Germany,51.2277,6.7735,wiko-nrw.de,No
+LIAS Lüneburg,Lüneburg,Germany,53.2289,10.4014,leuphana.de/lias,No
+CoF Tübingen,Tübingen,Germany,48.5244,9.0531,uni-tuebingen.de/cof,No
+CAS at EURAC Bozen,Bozen,Italy,46.4941,11.3475,eurac.edu/cas,No
+ZUKO Konstanz,Konstanz,Germany,47.6894,9.1873,uni-konstanz.de/zukunftskolleg,No
+CAIS Essen/Ruhr ,Bochum,Germany,51.4475,7.2608,cais-research.de,No
+IAS Erfurt,Erfurt,Germany,50.9912,11.0113,uni-erfurt.de/max-weber-kolleg,No
+IAS Passau,Passau,Germany,48.5684,13.4526,uni-passau.de/picais,No
+WIKO Greifswald,Greifswald,Germany,54.0953,13.3786,wiko-greifswald.de,No
+Humboldt Centre Universität Bayreuth,Bayreuth,Germany,49.92632758,11.58522207,ubtaktuell.uni-bayreuth.de/humboldt-centre-advanced-studies,No
